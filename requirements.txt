@@ -1,0 +1,16 @@
+# Pin exact versions once your environment works, so it is reproducible.
+# OCR (GPU)
+paddleocr
+paddlepaddle-gpu
+# Model
+torch
+transformers            # LayoutLMv3 lives here
+datasets
+seqeval                 # entity-level F1 for extraction
+# Spark
+pyspark
+# Utility
+pyyaml
+pandas
+pillow
+tqdm

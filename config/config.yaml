@@ -1,0 +1,20 @@
+project: receipt-field-extraction
+dataset: CORD            # CORD or SROIE
+paths:
+  raw: data/raw
+  interim: data/interim      # OCR output (json per image)
+  processed: data/processed  # Spark output (parquet)
+  models: models
+ocr:
+  engine: paddleocr
+  lang: en
+  use_gpu: true
+model:
+  name: microsoft/layoutlmv3-base
+  epochs: 10
+  batch_size: 8
+  lr: 5.0e-5
+fields:                   # what you are extracting
+  - total
+  - date
+  - vendor
